@@ -1,0 +1,14 @@
+{
+  "name": "boot",
+  "version": "0.1.0",
+  "description": "Bootstrap a JavaScript project",
+  "main": "./bin/boot",
+  "bin": {
+    "boot": "./bin/boot"
+  },
+  "author": "evenfrost",
+  "license": "WTFPL",
+  "dependencies": {
+    "yargs": "^6.5.0"
+  }
+}

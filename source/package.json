@@ -1,0 +1,36 @@
+{
+  "name": "My project",
+  "version": "0.0.1",
+  "description": "My project",
+  "main": "./server/index.js",
+  "author": "myname",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-env": "^0.0.6",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.0.1",
+    "html-webpack-plugin": "^2.24.0",
+    "json-loader": "^0.5.4",
+    "pug-loader": "^2.3.0",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm run dev:client",
+    "dev:client": "webpack-dev-server"
+  },
+  "dependencies": {
+    "pug": "^2.0.0-beta6"
+  }
+}
