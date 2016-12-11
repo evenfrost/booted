@@ -2,13 +2,35 @@
   "name": "boot",
   "version": "0.1.0",
   "description": "Bootstrap a JavaScript project",
-  "main": "./bin/boot",
+  "main": "bin/boot",
   "bin": {
     "boot": "./bin/boot"
   },
-  "author": "evenfrost",
+  "author": "evenfrost <evenfrosty@gmail.com>",
   "license": "WTFPL",
+  "keywords": [
+    "boot",
+    "bootstrap",
+    "project"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/evenfrost/boot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evenfrost/boot/issues"
+  },
   "dependencies": {
+    "fs-extra": "^1.0.0",
     "yargs": "^6.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.12.0",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0"
   }
 }

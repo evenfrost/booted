@@ -1,2 +1,15 @@
 #! /usr/bin/env node
-console.log("console.log output")
+
+const { argv } = require('yargs');
+const { resolve } = require('path');
+const { copy } = require('fs-extra');
+
+const dir = resolve('.', argv._[0] || '.');
+
+copy(resolve(__dirname, '../source/'), dir, err => {
+  if (err) {
+    return console.error(err);
+  }
+
+  console.log('success');
+});
