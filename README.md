@@ -9,6 +9,10 @@ Bootstrap a JavaScript project without fatigue.
 - [Pug](https://pugjs.org/)
 - [Stylus](http://stylus-lang.com/)
 
+## Requirements
+- [Node.js](https://nodejs.org/) v6 or higher
+- [Yarn](https://yarnpkg.com/)
+
 ## Installation
 ```sh
 yarn global add boot-cli
