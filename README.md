@@ -19,7 +19,11 @@ npm i -g boot-cli
 ## Usage
 ```sh
 # initialize new project in current folder
-boot # or boot .
+boot
 # or specify a folder
 boot /home/projects/my-awesome-project
+# then
+yarn start # http://localhost:3000
+# or
+PORT=1337 yarn start # http://localhost:1337
 ```
