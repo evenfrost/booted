@@ -24,7 +24,10 @@
     "url": "https://github.com/evenfrost/boot/issues"
   },
   "dependencies": {
-    "fs-extra": "^1.0.0",
+    "execa": "^0.5.0",
+    "listr": "^0.9.0",
+    "log-symbols": "^1.0.2",
+    "ora": "^0.3.0",
     "yargs": "^6.5.0"
   },
   "devDependencies": {

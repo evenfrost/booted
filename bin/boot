@@ -1,15 +1,29 @@
 #! /usr/bin/env node
 
-const { argv } = require('yargs');
 const { resolve } = require('path');
-const { copy } = require('fs-extra');
+const { argv } = require('yargs');
+const Listr = require('listr');
+const execa = require('execa');
+const ora = require('ora');
+const symbols = require('log-symbols');
 
 const dir = resolve('.', argv._[0] || '.');
+const spinner = ora();
 
-copy(resolve(__dirname, '../source/'), dir, err => {
-  if (err) {
-    return console.error(err);
-  }
+const tasks = new Listr([{
+  title: 'Copying code...',
+  task: () => execa('cp', ['-a', `${resolve(__dirname, '../source/')}/.`, dir]),
+}, {
+  title: 'Installing packages with Yarn...',
+  task: () => execa('yarn', ['install'], { cwd: dir, shell: true }),
+}]);
 
-  console.log('success');
-});
+tasks.run()
+  .then(() => {
+    spinner.text = 'Done.';
+    spinner.stopAndPersist(` ${symbols.success}`);
+  })
+  .catch(err => {
+    spinner.text = err && err.message || 'Errored.';
+    spinner.stopAndPersist(` ${symbols.error}`);
+  });

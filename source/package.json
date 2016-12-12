@@ -1,9 +1,9 @@
 {
-  "name": "My project",
+  "name": "booted",
   "version": "0.0.1",
-  "description": "My project",
+  "description": "A newly booted project",
   "main": "./server/index.js",
-  "author": "myname",
+  "author": "boot",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.18.0",

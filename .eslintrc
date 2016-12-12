@@ -6,6 +6,8 @@
   "parser": "babel-eslint",
   "rules": {
     "arrow-parens": ["error", "as-needed"],
-    "import/no-extraneous-dependencies": "off"
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-mixed-operators": "off"
   }
 }
