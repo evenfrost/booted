@@ -1,7 +1,7 @@
 {
   "name": "boot",
   "version": "0.1.0",
-  "description": "Bootstrap a JavaScript project",
+  "description": "Bootstrap a JavaScript project without fatigue",
   "main": "bin/boot",
   "bin": {
     "boot": "./bin/boot"
