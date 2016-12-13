@@ -37,9 +37,7 @@ export default {
     }),
   ],
   resolve: {
-    alias: {
-      vue$: 'vue/dist/vue.js',
-    },
+    root: rootResolve('client'),
   },
   devServer: {
     contentBase: rootResolve('client'),
