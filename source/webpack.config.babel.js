@@ -14,20 +14,20 @@ export default {
     publicPath: '/',
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loader: 'babel',
-    }, {
-      test: /\.json$/,
-      exclude: /node_modules/,
-      loader: 'json',
+      loader: 'babel-loader',
     }, {
       test: /\.pug$/,
-      loader: 'pug',
+      loaders: 'pug-loader',
     }, {
       test: /\.styl$/,
-      loader: 'style!css!stylus',
+      loaders: [
+        'style-loader',
+        'css-loader',
+        'stylus-loader',
+      ],
     }],
   },
   plugins: [
@@ -37,12 +37,16 @@ export default {
     }),
   ],
   resolve: {
-    root: rootResolve('client'),
+    modules: [
+      rootResolve('client'),
+      'node_modules',
+    ],
   },
   devServer: {
     contentBase: rootResolve('client'),
     inline: true,
     hot: true,
-    port: PORT || 3000,
+    compress: true,
+    port: +PORT || 3000,
   },
 };
