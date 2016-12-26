@@ -20,7 +20,7 @@ export default {
       loader: 'babel-loader',
     }, {
       test: /\.pug$/,
-      loaders: 'pug-loader',
+      loader: 'pug-loader',
     }, {
       test: /\.styl$/,
       loaders: [
