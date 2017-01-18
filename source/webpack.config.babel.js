@@ -44,8 +44,6 @@ export default {
   },
   devServer: {
     contentBase: rootResolve('client'),
-    inline: true,
-    hot: true,
     compress: true,
     port: +PORT || 3000,
   },
