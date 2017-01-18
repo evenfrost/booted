@@ -10,7 +10,7 @@ Bootstrap a JavaScript project without fatigue.
 - [Stylus](http://stylus-lang.com/)
 
 ## Requirements
-- [Node.js](https://nodejs.org/) v6 or higher
+- [Node.js](https://nodejs.org/) v7 or higher
 - [Yarn](https://yarnpkg.com/)
 
 ## Installation
