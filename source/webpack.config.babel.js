@@ -31,7 +31,6 @@ export default {
     }],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: `${rootResolve('client/index.pug')}`,
