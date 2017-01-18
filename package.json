@@ -1,6 +1,6 @@
 {
   "name": "boot-cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Bootstrap a JavaScript project without fatigue",
   "main": "bin/boot",
   "bin": {
