@@ -23,7 +23,7 @@ export default {
       loader: 'pug-loader',
     }, {
       test: /\.styl$/,
-      loaders: [
+      use: [
         'style-loader',
         'css-loader',
         'stylus-loader',
