@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const { PORT } = +process.env || 3000;
+const PORT = +process.env.PORT || 3000;
 
 const rootResolve = pathname => resolve(__dirname, pathname);
 
