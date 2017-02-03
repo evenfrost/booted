@@ -6,9 +6,14 @@ const Listr = require('listr');
 const execa = require('execa');
 const ora = require('ora');
 const symbols = require('log-symbols');
+const config = require('./../package.json');
 
 const dir = resolve('.', argv._[0] || '.');
 const spinner = ora();
+
+if (argv.version) {
+  return console.log(config.version); // eslint-disable-line
+}
 
 const tasks = new Listr([{
   title: 'Copying code...',
