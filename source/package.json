@@ -29,7 +29,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run dev:client",
-    "dev:client": "webpack-dev-server --inline --hot"
+    "dev:client": "webpack-dev-server --inline --hot --open"
   },
   "dependencies": {
     "pug": "^2.0.0-beta6"
