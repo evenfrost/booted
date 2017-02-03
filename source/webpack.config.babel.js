@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const { PORT } = process.env;
+const { PORT } = +process.env || 3000;
 
 const rootResolve = pathname => resolve(__dirname, pathname);
 
@@ -49,6 +49,6 @@ export default {
   devServer: {
     contentBase: rootResolve('client'),
     compress: true,
-    port: +PORT || 3000,
+    port: PORT,
   },
 };
