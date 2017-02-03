@@ -7,12 +7,16 @@ const { PORT } = process.env;
 const rootResolve = pathname => resolve(__dirname, pathname);
 
 export default {
-  entry: rootResolve('client/index.js'),
+  entry: [
+    `webpack-dev-server/client?http://localhost:${PORT}`,
+    rootResolve('client/index.js'),
+  ],
   output: {
     path: rootResolve('public'),
     filename: 'bundle.js',
     publicPath: '/',
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
