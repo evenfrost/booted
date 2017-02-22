@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "A newly booted project",
   "main": "./server/index.js",
-  "author": "boot",
+  "author": "boot-cli",
   "license": "MIT",
+  "engines": {
+    "node": ">=7"
+  },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.0",
@@ -28,10 +31,12 @@
   },
   "scripts": {
     "start": "npm run dev",
+    "start:server": "node --harmony_async_await ./server/index.js",
     "dev": "npm run dev:client",
     "dev:client": "webpack-dev-server --inline --hot --open"
   },
   "dependencies": {
+    "koa": "next",
     "pug": "^2.0.0-beta11"
   }
 }
