@@ -14,7 +14,7 @@
     "project"
   ],
   "engines": {
-    "node": ">=7"
+    "node": ">=7.6.0"
   },
   "repository": {
     "type": "git",
