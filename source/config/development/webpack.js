@@ -1,20 +1,20 @@
-import { resolve } from 'path';
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const { resolve } = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { port } = require('./misc');
 
-const PORT = +process.env.PORT || 3000;
+const rootResolve = pathname => resolve(__dirname, '../../', pathname);
 
-const rootResolve = pathname => resolve(__dirname, pathname);
 
-export default {
+module.exports = {
   entry: [
-    `webpack-dev-server/client?http://localhost:${PORT}`,
+    'webpack-hot-middleware/client',
     rootResolve('client/index.js'),
   ],
   output: {
     path: rootResolve('public'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: `http://localhost:${port}/`,
   },
   devtool: 'inline-source-map',
   module: {
@@ -39,16 +39,13 @@ export default {
     new HtmlWebpackPlugin({
       template: `${rootResolve('client/index.pug')}`,
     }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   resolve: {
     modules: [
       rootResolve('client'),
       'node_modules',
     ],
-  },
-  devServer: {
-    contentBase: rootResolve('client'),
-    compress: true,
-    port: PORT,
   },
 };

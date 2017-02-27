@@ -1,3 +1,7 @@
 import './index.styl';
 
-document.write('booted');
+document.body.innerHTML = 'booted';
+
+if (module.hot) {
+  module.hot.accept();
+}
