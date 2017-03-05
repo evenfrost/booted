@@ -1,4 +1,4 @@
-import app from './app';
-import { port } from './../config';
+const app = require('./app');
+const { port } = require('./../config');
 
 app.listen(port);

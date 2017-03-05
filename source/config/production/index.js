@@ -1,6 +1,6 @@
 const { port } = require('./../common');
 
 module.exports = {
-  env: 'development',
+  env: 'production',
   publicPath: `http://localhost:${port}/`,
 };

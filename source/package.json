@@ -9,39 +9,45 @@
     "node": ">=7.6.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.3.2",
-    "babel-preset-env": "^1.1.8",
+    "babel-preset-env": "^1.1.11",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-stage-1": "^6.22.0",
-    "css-loader": "^0.26.1",
-    "eslint": "^3.16.0",
-    "eslint-config-airbnb-base": "^11.1.0",
+    "css-loader": "^0.26.2",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb-base": "^11.1.1",
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^2.0.1",
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
     "koa-webpack-dev-middleware": "^1.4.4",
     "pug-loader": "^2.3.0",
-    "style-loader": "^0.13.1",
+    "style-loader": "^0.13.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.5.0",
+    "uglify-js": "^2.8.5",
     "webpack": "^2.2.1"
   },
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run dev:server",
-    "dev:server": "babel-node ./server/index.js"
+    "dev:server": "node ./server/index.js",
+    "prod": "npm run build && npm run prod:server",
+    "prod:server": "NODE_ENV=production node ./server/index.js",
+    "build": "npm run build:client",
+    "build:client": "NODE_ENV=production webpack --config ./config/webpack"
   },
   "dependencies": {
-    "koa": "next",
+    "koa": "^2.0.1",
     "koa-better-error-handler": "^1.0.9",
-    "koa-bodyparser": "next",
+    "koa-bodyparser": "^4.1.0",
     "koa-conditional-get": "next",
     "koa-connect-history-api-fallback": "^0.3.1",
     "koa-convert": "^1.2.0",
-    "koa-error": "^2.1.0",
+    "koa-error": "^3.0.0",
     "koa-etag": "3",
     "koa-helmet": "^3.1.0",
     "koa-logger": "next",
@@ -49,6 +55,7 @@
     "koa-static": "next",
     "koa-webpack-hot-middleware": "^1.0.3",
     "pretty-error": "^2.0.2",
-    "pug": "^2.0.0-beta11"
+    "pug": "^2.0.0-beta11",
+    "webpack-merge": "^3.0.0"
   }
 }
