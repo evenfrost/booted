@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A newly booted project",
   "main": "./server/index.js",
-  "author": "boot-cli",
+  "author": "booted",
   "license": "MIT",
   "engines": {
     "node": ">=7.6.0"

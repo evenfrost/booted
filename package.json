@@ -1,15 +1,16 @@
 {
-  "name": "boot-cli",
+  "name": "booted",
   "version": "0.4.1",
   "description": "Bootstrap a JavaScript project without fatigue",
-  "main": "bin/boot",
+  "main": "bin/booted",
   "bin": {
-    "boot": "./bin/boot"
+    "booted": "./bin/booted"
   },
   "author": "evenfrost <evenfrosty@gmail.com>",
   "license": "WTFPL",
   "keywords": [
     "boot",
+    "booted",
     "bootstrap",
     "project"
   ],
@@ -18,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/evenfrost/boot.git"
+    "url": "git://github.com/evenfrost/booted.git"
   },
   "bugs": {
-    "url": "https://github.com/evenfrost/boot/issues"
+    "url": "https://github.com/evenfrost/booted/issues"
   },
   "dependencies": {
     "execa": "^0.6.0",

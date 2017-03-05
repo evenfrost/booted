@@ -25,10 +25,10 @@ const tasks = new Listr([{
 
 tasks.run()
   .then(() => {
-    spinner.text = 'Done.';
+    spinner.text = 'Booted.';
     spinner.stopAndPersist(` ${symbols.success}`);
   })
   .catch(err => {
-    spinner.text = err && err.message || 'Errored.';
+    spinner.text = err && err.message || 'Got error.';
     spinner.stopAndPersist(` ${symbols.error}`);
   });

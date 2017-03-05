@@ -1,4 +1,4 @@
-# boot
+# booted
 Bootstrap a JavaScript project without fatigue.
 
 ## Features
@@ -16,9 +16,9 @@ Bootstrap a JavaScript project without fatigue.
 
 ## Installation
 ```sh
-yarn global add boot-cli
+yarn global add booted
 # or
-npm i -g boot-cli
+npm i -g booted
 ```
 
 ## Usage
