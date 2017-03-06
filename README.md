@@ -24,9 +24,9 @@ npm i -g booted
 ## Usage
 ```sh
 # initialize new project in current folder
-boot
+booted
 # or specify a folder
-boot /home/projects/my-awesome-project
+booted /home/projects/my-awesome-project
 # then
 yarn dev # http://localhost:3000
 # or
