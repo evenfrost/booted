@@ -5,17 +5,6 @@
   "extends": "airbnb-base",
   "parser": "babel-eslint",
   "rules": {
-    "arrow-parens": ["error", "as-needed"],
-    "import/no-extraneous-dependencies": "off",
-    "import/extensions": ["error", "always", {
-      "js": "never"
-    }],
-  },
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack.config.babel.js"
-      }
-    }
+    "arrow-parens": ["error", "as-needed"]
   }
 }
