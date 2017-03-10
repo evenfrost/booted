@@ -1,4 +1,16 @@
 {
+  "verbose": true,
+  "ignore": [
+    "public/scripts.js",
+    "public/styles.css",
+    ".git",
+    "node_modules"
+  ],
+  "watch": [
+    "server",
+    "public"
+  ],
+  "ext": "*",
   "events": {
     "restart": "npm run reload:browser"
   }
