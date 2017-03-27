@@ -14,7 +14,7 @@
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "webpack.config.babel.js"
+        "config": "config/webpack.js"
       }
     }
   }
