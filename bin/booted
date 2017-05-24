@@ -7,6 +7,7 @@ const execa = require('execa');
 const ora = require('ora');
 const symbols = require('log-symbols');
 const config = require('./../package.json');
+const mkdirp = require('mkdirp-promise');
 
 const dir = resolve('.', argv._[0] || '.');
 const spinner = ora();
@@ -17,7 +18,8 @@ if (argv.version) {
 
 const tasks = new Listr([{
   title: 'Copying code...',
-  task: () => execa('cp', ['-a', `${resolve(__dirname, '../source/')}/.`, dir]),
+  task: () => mkdirp(dir)
+    .then(() => execa('cp', ['-a', `${resolve(__dirname, '../source/')}/.`, dir])),
 }, {
   title: 'Installing packages with Yarn...',
   task: () => execa('yarn', ['install'], { cwd: dir, shell: true }),
