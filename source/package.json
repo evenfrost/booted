@@ -22,8 +22,10 @@
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^2.3.0",
     "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.13.3",
     "json-loader": "^0.5.4",
     "koa-webpack-dev-middleware": "^1.4.6",
+    "lint-staged": "^3.4.2",
     "pug-loader": "^2.3.0",
     "style-loader": "^0.18.1",
     "stylus": "^0.54.5",
@@ -38,7 +40,8 @@
     "prod": "npm run build && npm run prod:server",
     "prod:server": "NODE_ENV=production node ./server/index.js",
     "build": "npm run build:client",
-    "build:client": "NODE_ENV=production webpack --config ./config/webpack"
+    "build:client": "NODE_ENV=production webpack --config ./config/webpack",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "koa": "^2.2.0",
