@@ -1,20 +1,31 @@
 #! /usr/bin/env node
 
 const { resolve } = require('path');
-const { argv } = require('yargs');
 const Listr = require('listr');
 const execa = require('execa');
 const ora = require('ora');
 const symbols = require('log-symbols');
-const config = require('./../package.json');
 const mkdirp = require('mkdirp-promise');
+const meow = require('meow');
 
-const dir = resolve('.', argv._[0] || '.');
+const cli = meow(`
+  Usage:
+    $ booted <directory>
+
+  Options:
+    --version, -v  Print package version
+
+  Examples:
+    booted                     Boots new project in current directory
+    booted /my/path/to/folder  Creates directory at provided path and boots project in it
+`, {
+  alias: {
+    v: 'version',
+  },
+});
+
 const spinner = ora();
-
-if (argv.version) {
-  return console.log(config.version); // eslint-disable-line
-}
+const dir = resolve('.', cli.input[0] || '.');
 
 const tasks = new Listr([{
   title: 'Copying code...',
