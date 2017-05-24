@@ -1,1 +1,1 @@
-console.log('golance');
+console.log('golance'); // eslint-disable-line
