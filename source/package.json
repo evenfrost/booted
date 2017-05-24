@@ -9,7 +9,7 @@
     "node": ">=7.6.0"
   },
   "devDependencies": {
-    "autoprefixer-stylus": "^0.13.0",
+    "autoprefixer-stylus": "^0.14.0",
     "babel-eslint": "^7.1.0",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
@@ -21,7 +21,7 @@
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
     "stylus": "^0.54.5",
-    "uglify-js": "^2.8.10",
+    "uglify-js": "^3.0.11",
     "uglifyify": "^3.0.4",
     "watchify": "^3.9.0"
   },
@@ -56,14 +56,14 @@
     "koa-error": "^3.0.0",
     "koa-etag": "3",
     "koa-helmet": "^3.1.0",
-    "koa-logger": "next",
+    "koa-logger": "^3.0.0",
     "koa-methodoverride": "^2.0.0",
     "koa-pug": "^3.0.0-2",
     "koa-route": "^3.2.0",
     "koa-static": "next",
     "lodash": "^4.17.4",
     "nodemon": "^1.11.0",
-    "normalize.css": "^5.0.0",
+    "normalize.css": "^7.0.0",
     "pretty-error": "^2.0.2",
     "pug": "^2.0.0-beta11"
   }
