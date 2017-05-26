@@ -3,7 +3,7 @@ const { publicPath } = require('./index');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client',
+    'webpack-hot-middleware/client?reload=true',
   ],
   output: {
     publicPath,
