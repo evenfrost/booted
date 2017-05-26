@@ -38,8 +38,8 @@ module.exports = {
   ],
   resolve: {
     modules: [
-      rootResolve('client'),
       'node_modules',
+      rootResolve('client'),
     ],
   },
 };
