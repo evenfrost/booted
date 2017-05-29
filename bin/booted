@@ -32,8 +32,12 @@ const tasks = new Listr([{
   task: () => mkdirp(dir)
     .then(() => execa('cp', ['-a', `${resolve(__dirname, '../source/')}/.`, dir])),
 }, {
+  title: 'Initiating Git repository...',
+  task: () => execa('git', ['init'], { cwd: dir }),
+}, {
   title: 'Installing packages with Yarn...',
-  task: () => execa('yarn', ['install'], { cwd: dir, shell: true }),
+  task: () => execa('yarn', { cwd: dir })
+    .then(() => execa('yarn', ['add', 'husky', '--dev'], { cwd: dir })),
 }]);
 
 tasks.run()
