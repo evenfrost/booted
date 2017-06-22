@@ -25,12 +25,16 @@ npm i -g booted
 ```sh
 # initialize new project in current folder
 booted
+
 # or specify a folder
 booted /home/projects/my-awesome-project
+
 # then
 yarn dev # http://localhost:3000
+
 # or
 PORT=1337 yarn dev # http://localhost:1337
+
 # build and use in production
 yarn prod # http://localhost:3000
 ```
