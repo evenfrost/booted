@@ -12,8 +12,7 @@ const helmet = require('koa-helmet');
 const serve = require('koa-static');
 const PrettyError = require('pretty-error');
 const historyApiFallback = require('koa-connect-history-api-fallback');
-const webpackDevMiddleware = require('koa-webpack-dev-middleware');
-const webpackHotMiddleware = require('koa-webpack-hot-middleware');
+const { devMiddleware, hotMiddleware } = require('koa-webpack-middleware');
 const webpack = require('webpack');
 
 const { env } = require('./../config');
@@ -39,9 +38,9 @@ if (env === 'production') {
   })));
   app.use(serve(resolve(__dirname, '..', 'public')));
 } else {
-  app.use(convert(webpackDevMiddleware(webpackCompiler, webpackConfig.devServer)));
+  app.use(convert(devMiddleware(webpackCompiler, webpackConfig.devServer)));
 
-  app.use(convert(webpackHotMiddleware(webpackCompiler)));
+  app.use(convert(hotMiddleware(webpackCompiler)));
 
   app.use(convert(historyApiFallback({
     verbose: true,

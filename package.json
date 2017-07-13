@@ -34,9 +34,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.1.1",
+    "eslint": "^4.2.0",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.6.0",
-    "webpack-dev-server": "^2.5.0"
+    "eslint-plugin-import": "^2.7.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
